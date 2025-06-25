@@ -1,0 +1,24 @@
+def convert_temperature():
+    print("Temperature Converter")
+    print("1. Celsius to Fahrenheit")
+    print("2. Fahrenheit to Celsius")
+    print("3. Celsius to Kelvin")
+    print("4. Kelvin to Celsius")
+    print("5. Exit")
+    while True:
+        choice = input("Choose an option (1-5): ")
+        if choice == '5':
+            print("Goodbye!")
+            break
+        temp = float(input("Enter temperature: "))
+        if choice == '1':
+            print(f"{temp}°C = {(temp * 9/5) + 32}°F")
+        elif choice == '2':
+            print(f"{temp}°F = {(temp - 32) * 5/9}°C")
+        elif choice == '3':
+            print(f"{temp}°C = {temp + 273.15}K")
+        elif choice == '4':
+            print(f"{temp}K = {temp - 273.15}°C")
+        else:
+            print("Invalid choice. Try again.")
+convert_temperature()
